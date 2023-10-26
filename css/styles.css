@@ -69,6 +69,9 @@ ol {
   margin-left: auto;
   margin-right: auto;
   width: 1440px;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 .page-navigation {
   display: flex;
@@ -115,7 +118,7 @@ ol {
 }
 .current {
   position: relative;
-  color: #2e2f42;
+  color: #404bbf;
 }
 .link-menu.current::after {
   content: '';
@@ -141,6 +144,7 @@ ol {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-addrs:hover,
 .link-addrs:focus {
@@ -151,19 +155,19 @@ ol {
 }
 /* Hero styles */
 .hero-main {
-  width: 1440px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   background-color: #2e2f42;
   padding: 188px 0;
   background-image: linear-gradient(
-      0deg,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/people-office\ .jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -222,15 +226,14 @@ ol {
   gap: 24px;
 }
 .features-item {
-  width: calc((100% - 72px) / 4);
-  height: auto;
-}
-.features-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
+  width: calc((100% - 72px) / 4);
+  height: auto;
 }
+
 .icon-features {
   width: 64px;
   height: 64px;
@@ -238,9 +241,9 @@ ol {
 .icon-box {
   display: flex;
   justify-content: center;
-  width: 264px;
+  align-items: center;
   height: 112px;
-  padding: 24px;
+  padding: 24px 100px;
   border: 1px solid #8e8f99;
   border-radius: 4px;
   background: #f4f4fd;
@@ -322,8 +325,6 @@ ol {
   height: auto;
 }
 .team-icon {
-  width: 16px;
-  height: 16px;
   fill: #f4f4fd;
   background-color: inherit;
 }
@@ -335,6 +336,8 @@ ol {
 
 .team-link {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -413,13 +416,10 @@ ol {
 .portfolio-overlay {
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  padding-top: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
-  color: #fff;
+  padding: 40px 32px;
+  color: #f4f4fd;
   background-color: #4d5ae5;
   font-size: 16px;
   font-weight: 400;
@@ -440,7 +440,6 @@ ol {
 }
 .footer-container {
   display: flex;
-  gap: 120px;
   justify-content: flex-start;
   align-items: baseline;
   padding-top: 100px;
@@ -452,6 +451,9 @@ ol {
   letter-spacing: 0.32px;
   color: #f4f4fd;
   max-width: 264px;
+}
+.footer-content {
+  margin-right: 120px;
 }
 
 .logo-span-footer {
@@ -475,15 +477,12 @@ ol {
   margin-bottom: 16px;
 }
 .footer-icon {
-  width: 24px;
-  height: 24px;
   fill: #f4f4fd;
   background-color: inherit;
 }
 .social {
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 .social-midia-list {
   display: flex;
@@ -491,10 +490,14 @@ ol {
   align-items: center;
   gap: 16px;
 }
-.social-link {
-  display: flex;
+.social-circle {
   width: 40px;
   height: 40px;
+}
+.social-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: #4d5ae5;
   padding: 8px;
@@ -503,11 +506,12 @@ ol {
 .social-midia-title {
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.5em;
+  line-height: 1.5;
   letter-spacing: 0.02em;
-  color: #fff;
+  color: #ffffff;
+  margin-bottom: 16px;
 }
 .social-link:hover,
 .social-link:focus {
-  background-color: #404bbf;
+  background-color: #31d0aa;
 }
